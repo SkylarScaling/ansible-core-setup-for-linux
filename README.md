@@ -1,9 +1,11 @@
 # ansible-core-setup-for-linux
-This repo allows you to easily get Ansible core installed and running on your linux environment so you can utilize my other Ansible based automation repos.
+This repo allows you to easily get Ansible core installed and running on your linux environment so you can utilize my 
+other Ansible based automation repos.
 
 # Ansible Automated Installation Scripts
 
-This repository contains a set of modular shell scripts designed to install [Ansible](https://www.ansible.com/) and its required Python prerequisites on a Linux system.
+This repository contains a set of modular shell scripts designed to install [Ansible](https://www.ansible.com/) and its 
+required Python prerequisites on a Linux system.
 
 To prevent package conflicts with your host OS, this installation process uses a **Python Virtual Environment**.
 
@@ -43,7 +45,8 @@ To prevent package conflicts with your host OS, this installation process uses a
    > **Note:** You may be prompted for your password during execution to install the system-level Python packages via sudo.
 
 ## Post-Installation
-Because Ansible is installed inside a virtual environment, you need to activate it before running Ansible commands (ansible, ansible-playbook, etc.).
+Because Ansible is installed inside a virtual environment, you need to activate it before running Ansible commands 
+(ansible, ansible-playbook, etc.).
 
 To activate the environment:
 
@@ -52,8 +55,20 @@ source ansible_venv/bin/activate
 ```
 (Replace ansible_venv with your custom directory name if you provided one).
 
-You will know it is active because your terminal prompt will change to include (ansible_venv). To exit the environment when you are finished, simply type:
+You will know it is active because your terminal prompt will change to include (ansible_venv). 
 
+Alternatively, you can use a shortcut command to activate the virtual environment. If you want to use the shortcut 
+immediately in your current window, reload your profile:
+```bash
+source ~/.bashrc
+```
+
+Then you can run the custom command:
+```bash
+ansible-env
+```
+
+To exit the environment when you are finished, simply type:
 ```bash
 deactivate
 ```
